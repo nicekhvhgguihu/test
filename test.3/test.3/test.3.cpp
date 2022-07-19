@@ -1,9 +1,63 @@
-﻿#include<stdio.h>
+﻿//输入一个数判断是否是素数
+#include<stdio.h>
+#include<math.h>
+void judeg(int x)
+{
+	int b = sqrt(x);
+	int i;
+	for (i = 2; i <= b; i++)
+	{
+		if (x % i == 0)
+		{
+			printf("not prime");
+			break;
+		}
+		if (i == b)
+		{
+			printf("prime");
+		}
+
+	}
+}
 int main()
 {
 	int x;
 	scanf("%d",&x);
-	printf("hello");
+	judeg(x);
 }
-//严重性	代码	说明	项目	文件	行	禁止显示状态
-//错误	C4996	'scanf': This function or variable may be unsafe.Consider using scanf_s instead.To disable deprecation, use _CRT_SECURE_NO_WARNINGS.See online help for details.test.3	D : \test\test.3\test.3\test.3.cpp	5
+//对二维数组的转置
+#include<stdio.h>
+void switch_1(int arr[3][3])
+{
+	int i, j;
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 3; j++)
+		{
+			printf("%d", arr[j][i]);
+			if (j == 2)
+			{
+				printf("\n");
+			}
+			else
+			{
+				printf(" ");
+			}
+		}
+	}
+
+}
+int main(void)
+{
+	int arr[3][3] = { 0 };
+	int i, j;
+	for (i = 0; i < 3; i++)
+	{
+		for (j = 0; j < 3; j++)
+		{
+			scanf("%d",&arr[i][j]);
+		}
+	}
+
+	switch_1(arr);
+}

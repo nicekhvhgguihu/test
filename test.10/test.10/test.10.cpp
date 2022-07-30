@@ -1,52 +1,52 @@
-﻿#include<stdio.h>
-void fun(int arr1[10], int arr[10])
-{
-	int i,j;
-	int tmp = arr1[0];
-	for (i = 1; i < 10; i++)
-	{
-		if (tmp > arr1[i])
-		{
-			tmp = arr[i];
-			j = i;
-		}
-	}
-	int f = arr[j];
-	arr[j] = arr[9];
-	arr[9] = f;
-	for (i = 0; i < 10; i++)
-	{
-		printf("%d",arr[i]);
-		if (i != 9)
-		{
-			printf(" ");
-		}
-	}
-
-}
-int main()
-{
-	int arr[10];
-	int i;
-	for (i = 0; i < 10; i++)
-	{
-		scanf("%d",&arr[i]);
-	}
-	int arr1[10];
-	
-	for (i = 0; i < 10; i++)
-	{
-		if (arr[i] < 0)
-		{
-			arr1[i] = -arr[i];
-		}
-		else
-		{
-			arr1[i] = arr[i];
-		}
-	}
-	fun(arr1, arr);
-}
+﻿//#include<stdio.h>
+//void fun(int arr1[10], int arr[10])
+//{
+//	int i,j;
+//	int tmp = arr1[0];
+//	for (i = 1; i < 10; i++)
+//	{
+//		if (tmp > arr1[i])
+//		{
+//			tmp = arr[i];
+//			j = i;
+//		}
+//	}
+//	int f = arr[j];
+//	arr[j] = arr[9];
+//	arr[9] = f;
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d",arr[i]);
+//		if (i != 9)
+//		{
+//			printf(" ");
+//		}
+//	}
+//
+//}
+//int main()
+//{
+//	int arr[10];
+//	int i;
+//	for (i = 0; i < 10; i++)
+//	{
+//		scanf("%d",&arr[i]);
+//	}
+//	int arr1[10];
+//	
+//	for (i = 0; i < 10; i++)
+//	{
+//		if (arr[i] < 0)
+//		{
+//			arr1[i] = -arr[i];
+//		}
+//		else
+//		{
+//			arr1[i] = arr[i];
+//		}
+//	}
+//	fun(arr1, arr);
+//}
 //#include<stdio.h>
 //double fun()
 //{
@@ -219,4 +219,10 @@ int main()
 //	scanf("%d %d",&a,&b);
 //	fun_1(a, b);
 //	fun_2(a, b);
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int x = 4;
+//	printf("%d",x/2);
 //}

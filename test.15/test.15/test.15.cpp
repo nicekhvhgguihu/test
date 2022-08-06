@@ -98,3 +98,13 @@
 //	switch_1(&arr[2]);
 //
 //}
+#include<stdio.h>
+void sum(const char* a)
+{
+
+}
+int main()
+{
+	char arr[100];
+	sum(arr);
+}

@@ -57,3 +57,18 @@
 //	}
 //	return max;
 //}
+#include<stdio.h>
+struct st
+{
+	double a;
+	char b;
+};
+void print(const struct st* s)
+{
+}
+int main()
+{
+	struct st s = { 0 };
+	print(&s);
+	
+}

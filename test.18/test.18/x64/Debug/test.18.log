@@ -1,0 +1,3 @@
+﻿  contact.cpp
+D:\test\test.18\test.18\contact.cpp(112): warning C4715: “search_info”: 不是所有的控件路径都返回值
+  test.18.vcxproj -> D:\test\test.18\x64\Debug\test.18.exe

@@ -59,4 +59,4 @@ typedef struct sort_contact
 	struct peoinfo date;
 }sc;
 
-int(*sort_arr[max_digit])(struct contact *) = {sort_name,sort_age,sort_sex,sort_adress,sort_telephone};
+//int(*sort_arr[max_digit])(struct contact *) = {sort_name,sort_age,sort_sex,sort_adress,sort_telephone};

@@ -151,8 +151,8 @@ void modify_info(struct contact* info)
 	}
 
 }
-void sort_info(struct contact* info, int (*p)(struct contact*))
-{
-	sc a = { 0 };
-
-}
+//void sort_info(struct contact* info, int (*p)(struct contact*))
+//{
+//	sc a = { 0 };
+//
+//}

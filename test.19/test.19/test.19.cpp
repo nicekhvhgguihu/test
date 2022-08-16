@@ -157,54 +157,89 @@
 //                b[x + 1][y + 1] += 1;
 //    return;
 //}
+//#include<stdio.h>
+//int main()
+//{
+//	int a; int arr[100][100];
+//	int d = 1,count=0,f;
+//	while (~(scanf("%d", &a)))
+//	{
+//		int i,j;
+//		d = 1;
+//		for (i = 0; i < a; i++)
+//		{
+//			count++;
+//			f = i;
+//			for (j = 0; j < count; j++)
+//			{
+//				
+//				arr[f--][j] = d;
+//				d++;
+//				if (i == 0 && j != 0)
+//				{
+//					break;
+//				}
+//			}
+//		}
+//		count = a;
+//		for (i = 0; i < a; i++)
+//		{
+//			
+//			for (j = 0; j <count; j++)
+//			{
+//				
+//				
+//				printf("%d",arr[i][j]);
+//				if (j != count - 1)
+//				{
+//					printf(" ");
+//				}
+//
+//				if (j == (count - 1))
+//				{
+//					printf("\n");
+//				}
+//				
+//				
+//			}
+//			count--;
+//		}
+//
+//
+//	}
+//}
 #include<stdio.h>
+#include<malloc.h>
+struct str
+{
+	int a;
+	int* b;
+};
 int main()
 {
-	int a; int arr[100][100];
-	int d = 1,count=0,f;
-	while (~(scanf("%d", &a)))
+	struct str s;
+	s.b = (int*)malloc(5 * sizeof(int ));
+	int i;
+	for (i = 0; i < 5; i++)
 	{
-		int i,j;
-		d = 1;
-		for (i = 0; i < a; i++)
-		{
-			count++;
-			f = i;
-			for (j = 0; j < count; j++)
-			{
-				
-				arr[f--][j] = d;
-				d++;
-				if (i == 0 && j != 0)
-				{
-					break;
-				}
-			}
-		}
-		count = a;
-		for (i = 0; i < a; i++)
-		{
-			
-			for (j = 0; j <count; j++)
-			{
-				
-				
-				printf("%d",arr[i][j]);
-				if (j != count - 1)
-				{
-					printf(" ");
-				}
-
-				if (j == (count - 1))
-				{
-					printf("\n");
-				}
-				
-				
-			}
-			count--;
-		}
-
-
+		s.b[i] = i;
 	}
+	int* scr = (int *)realloc(s.b, 40);
+	if (scr != NULL)
+	{
+		s.b = scr;
+	}
+	
+	for (i = 5; i < 10; i++)
+	{
+		s.b[i] = i;
+	}
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d\n", s.b[i]);
+	}
+	free(scr);
+	
+	scr = NULL;
+	s.b = NULL;
 }

@@ -207,3 +207,15 @@
 //	else
 //		printf("Invalid operator!");
 //}
+#include<stdio.h>
+struct book
+{
+	char name[100];
+	int price;
+};
+int main()
+{
+	struct book s = { "西游戏",18 };
+	s.price = 20;
+	s.name[100] = (char )"";
+}

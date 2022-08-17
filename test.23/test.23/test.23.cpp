@@ -388,7 +388,3 @@
 //	printf("%d", c);
 //}
 #include<stdio.h>
-int main()
-{
-
-}
